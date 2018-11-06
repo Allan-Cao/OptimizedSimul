@@ -16,7 +16,7 @@ for trial in range(run):
     for x in range(dice):
         rolls.append(roll())
     datastore.append(-1*((Counter(rolls)[roll()])-1))
-print(sum(datastore)/len(datastore))
+
 print("it took "+str(time.time()-start)+" seconds")
 import pickle
 pickle.dump(datastore, open( "data2.p", "wb" ) )
